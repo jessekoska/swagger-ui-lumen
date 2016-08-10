@@ -3,7 +3,7 @@ SwaggerUILumen
 
 Swagger UI for Lumen 5
 
-Martin Abelson Sahlen version of swagger-ui implemented.
+Martin Abelson Sahlen style of swagger-ui implemented.
 
 Installation
 ============
