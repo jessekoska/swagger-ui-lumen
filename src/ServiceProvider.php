@@ -3,6 +3,9 @@
 namespace SwaggerUILumen;
 
 use SwaggerUILumen\Console\PublishCommand;
+use SwaggerUILumen\Console\PublishAssetsCommand;
+use SwaggerUILumen\Console\PublishConfigCommand;
+use SwaggerUILumen\Console\PublishViewsCommand;
 use Illuminate\Support\ServiceProvider as BaseProvider;
 
 class ServiceProvider extends BaseProvider
