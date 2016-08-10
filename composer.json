@@ -20,7 +20,7 @@
   "require": {    
     "php": ">=5.5.9",
     "laravel/lumen-framework": "~5.0"
-  }
+  },
   "autoload": {
     "psr-4": {
       "SwaggerUILumen\\": "src"
