@@ -32,5 +32,6 @@ add this line in `Register Service Providers` section:
 Configuration
 ============
 
+- Run `php artisan swagger-lume:publish-config` to publish configs (`config/swagger-lume.php`)
 - Make configuration changes if needed 
 - Run `php artisan swagger-ui-lumen:publish` to publish
