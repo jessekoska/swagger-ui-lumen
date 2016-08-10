@@ -1,0 +1,32 @@
+{
+  "name": "jessekoska/swagger-ui-lumen",
+  "description": "Swagger UI in Lumen 5",
+  "keywords": ["lumen", "laravel", "swagger"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jesse Koska",
+      "email": "jessekoska@gmail.com"
+    }
+  ],
+  "require": {    
+    "php": ">=5.5.9",
+    "laravel/lumen-framework": "~5.0"
+  }
+  "autoload": {
+    "psr-4": {
+      "SwagLumen\\": "src"
+    }
+  },
+  // "autoload-dev": {
+  //   "classmap": [
+  //     "tests/LumenTestCase.php"
+  //   ],
+  //   "files": [
+  //     "tests/ConsoleKernel.php"
+  //   ]
+  // },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
+
