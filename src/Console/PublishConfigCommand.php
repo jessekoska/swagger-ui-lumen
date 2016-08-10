@@ -1,8 +1,8 @@
 <?php
 
-namespace SwaggerLume\Console;
+namespace SwaggerUILumen\Console;
 
-use SwaggerLume\Console\Helpers\Publisher;
+use SwaggerUILumen\Console\Helpers\Publisher;
 use Illuminate\Console\Command;
 
 class PublishConfigCommand extends Command
