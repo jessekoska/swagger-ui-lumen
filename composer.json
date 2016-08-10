@@ -7,6 +7,14 @@
     {
       "name": "Jesse Koska",
       "email": "jessekoska@gmail.com"
+    },
+    {
+      "name": "Darius Matulionis",
+      "email": "darius@matulionis.lt"
+    },
+    {
+      "name": "Martin Abelson Sahlen",
+      "email": "sahlen@stud.ntnu.no"
     }
   ],
   "require": {    
@@ -15,17 +23,9 @@
   }
   "autoload": {
     "psr-4": {
-      "SwagLumen\\": "src"
+      "SwaggerUILumen\\": "src"
     }
   },
-  // "autoload-dev": {
-  //   "classmap": [
-  //     "tests/LumenTestCase.php"
-  //   ],
-  //   "files": [
-  //     "tests/ConsoleKernel.php"
-  //   ]
-  // },
   "minimum-stability": "dev",
   "prefer-stable": true
 }
