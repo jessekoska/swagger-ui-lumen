@@ -28,7 +28,7 @@ class Generator
             } catch (ParseException $e) {
                 printf("Unable to parse the YAML string: %s", $e->getMessage());
             }
-            $json = json_encode($array);
+            $json = json_encode($array, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 
             if (file_put_contents($filename, $json) === false) {
                 throw new Exception('Failed to save ("' . $filename . '")');

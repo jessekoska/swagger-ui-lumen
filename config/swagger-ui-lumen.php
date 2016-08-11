@@ -24,6 +24,8 @@ return [
     'paths' => [
         // Absolute path to location where parsed swagger annotations will be stored
         'docs'              => storage_path('api-docs'),
+        // Absolute path to directory containing the swagger annotations are stored.
+        'annotations'       => base_path('app'),
         // Absolute path to directory where to export assets
         'assets'            => base_path('public/vendor/swagger-ui-lumen'),
         // Path to assets public directory
@@ -31,4 +33,6 @@ return [
         // Absolute path to directory where to export views
         'views'             => base_path('resources/views/vendor/swagger-ui-lumen'),
     ],
+    // Turn this off to remove swagger generation on production
+    'generate_always' => env('SWAGGER_GENERATE_ALWAYS', true),
 ];

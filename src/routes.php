@@ -7,6 +7,9 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
 
 $app->get(config('swagger-ui-lumen.routes.docs'), function ($page = 'api-docs.json') {
+    if (config('swagger-ui-lumen.generate_always')) {
+        Generator::generateDocs();
+    }
     $filePath = config('swagger-ui-lumen.paths.docs')."/{$page}";
 
     if (File::extension($filePath) === '') {
@@ -25,7 +28,7 @@ $app->get(config('swagger-ui-lumen.routes.docs'), function ($page = 'api-docs.js
 });
 
 $app->get(config('swagger-ui-lumen.routes.api'), function () {
-    if (config('swagger-lume.generate_always')) {
+    if (config('swagger-ui-lumen.generate_always')) {
         Generator::generateDocs();
     }
     
