@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\App;
-use Swagger\Swagger;
+use SwaggerUILumen\Generator;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
@@ -25,6 +25,9 @@ $app->get(config('swagger-ui-lumen.routes.docs'), function ($page = 'api-docs.js
 });
 
 $app->get(config('swagger-ui-lumen.routes.api'), function () {
+    if (config('swagger-lume.generate_always')) {
+        \SwaggerUILumen\Generator::generateDocs();
+    }
     
     if (config('swagger-ui-lumen.proxy')) {
         $proxy = (new Request)->server('REMOTE_ADDR');
