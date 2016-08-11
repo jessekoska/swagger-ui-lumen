@@ -34,5 +34,5 @@ class Generator
                 throw new Exception('Failed to save ("' . $filename . '")');
             }
         }
-    }\
+    }
 }
