@@ -24,7 +24,7 @@ class Generator
             $yaml = base_path('api-docs.yaml');
             
             try {
-                $array = Yaml::parse(file_get_contents('/path/to/file.yml'));
+                $array = Yaml::parse(file_get_contents($yaml));
             } catch (ParseException $e) {
                 printf("Unable to parse the YAML string: %s", $e->getMessage());
             }
