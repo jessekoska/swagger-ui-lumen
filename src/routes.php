@@ -26,7 +26,7 @@ $app->get(config('swagger-ui-lumen.routes.docs'), function ($page = 'api-docs.js
 
 $app->get(config('swagger-ui-lumen.routes.api'), function () {
     if (config('swagger-lume.generate_always')) {
-        \SwaggerUILumen\Generator::generateDocs();
+        Generator::generateDocs();
     }
     
     if (config('swagger-ui-lumen.proxy')) {
