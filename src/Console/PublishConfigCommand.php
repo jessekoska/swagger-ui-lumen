@@ -35,5 +35,11 @@ class PublishConfigCommand extends Command
             base_path('config'),
             'swagger-ui-lumen.php'
         );
+
+        (new Publisher($this))->publishFile(
+            realpath(__DIR__.'/../../resources/').'/api-docs-example.yaml',
+            base_path(),
+            'api-docs.yaml'
+        );
     }
 }

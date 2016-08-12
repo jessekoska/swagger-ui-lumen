@@ -13,7 +13,7 @@ class Publisher
         $this->command = $command;
     }
 
-    public function publishFile($source, $destinationPath, $fileName)
+    public function publishFile($source, $destinationPath, $fileName, $can_overwrite = false)
     {
         if (! is_dir($destinationPath)) {
             if (! mkdir($destinationPath, 0755, true)) {
@@ -28,8 +28,11 @@ class Publisher
         }
 
         if (file_exists($source)) {
-            if (! copy($source, $destinationPath.'/'.$fileName)) {
-                $this->command->error('File was not copied');
+            $destination = $destinationPath.'/'.$fileName;
+            if ($can_overwrite || ! $can_overwrite && ! file_exists($destination)){
+                if (! copy($source, $destination)) {
+                    $this->command->error('File was not copied');
+                }
             }
         } else {
             $this->command->error('Source file does not exists');
