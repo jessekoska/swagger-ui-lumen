@@ -26,12 +26,12 @@ add this line before `Register Container Bindings` section:
 
 add this line in `Register Service Providers` section:
 ```php
-    $app->register(\SwaggerUILumen\ServiceProvider::class);
+    $app->register(SwaggerUILumen\ServiceProvider::class);
 ```
 
 Configuration
 ============
 
-- Run `php artisan swagger-lume:publish-config` to publish configs (`config/swagger-lume.php`)
+- Run `php artisan swagger-ui-lumen:publish-config` to publish configs (`config/swagger-ui-lumen.php`)
 - Make configuration changes if needed 
 - Run `php artisan swagger-ui-lumen:publish` to publish
